@@ -1,0 +1,22 @@
+<% include partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">New medicine</div>
+    <form class="ui form" action="/medicine" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="name">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="image">
+        </div>
+        <div class="field">
+            <label>medicine desc.</label>
+            <textarea name="description"></textarea>
+        </div>
+        <button class="ui big violet basic button">add medicine</button>
+    </form>
+</div>
+
+<% include partials/footer %>

@@ -1,0 +1,35 @@
+<% include partials/header %>
+
+
+<div class="ui main text container">
+   	<div class="ui huge header">MD Store</div>
+    <div class="ui top attached segment">
+<div class="ui divided items">
+	<% all_med.forEach(function(med){ %>
+	 <div class="item">
+	    <div class="image">
+	      <img src="<%= med.image %>">
+	    </div>
+	    <div class="content">
+	      <a class="header"><%= med.name %></a>
+	      <div class="meta">
+	        <span class="cinema"><%= med.created.toDateString() %></span>
+	      </div>
+	      <div class="description">
+	        <p><%= med.description %></p>
+	      </div>
+	      <div class="extra">
+	        <a href="/medicine/<%=med._id %>" class="ui floated basic violet button">
+	          Read More
+	          <i class="right chevron icon"></i>
+	        </a>
+	      </div>
+	    </div>
+	  </div>
+	<% }); %>
+</div>
+</div>
+
+
+
+<% include partials/footer %>
